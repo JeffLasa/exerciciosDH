@@ -1,4 +1,4 @@
-public class Professor {
+public class Professor implements Docente {
     private String nomeProfessor;
     private String registroDocente;
 
@@ -6,7 +6,9 @@ public class Professor {
         System.out.println("Professor "+ nomeProfessor + " deu aula");
     }
 
-    public void fazerChamada (){
+    public interface Docente {
+        public void fazerChamada();
+        public void darAula();
         System.out.println("A chamada foi feita");
     }
 
