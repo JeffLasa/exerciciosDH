@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e9e6a3f-6491-4364-b626-5aa5b15baa7e" name="Default" comment="" />
+    <list default="true" id="7d690e81-b4c7-4335-abea-c6eb996f295b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,34 +12,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Carro.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Carro.java">
+      <file leaf-file-name="Loteria.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Loteria.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-              <folding>
-                <element signature="e#125#126#0" expanded="true" />
-                <element signature="e#151#152#0" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
-                <element signature="e#704#705#0" expanded="true" />
-                <element signature="e#736#737#0" expanded="true" />
-                <element signature="e#764#765#0" expanded="true" />
-                <element signature="e#806#807#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="326">
+              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TesteCarro.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/TesteCarro.java">
+      <file leaf-file-name="Sonhos.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sonhos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="36" column="62" lean-forward="true" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
+            <state relative-caret-position="119">
+              <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+              <folding>
+                <element signature="e#110#111#0" expanded="true" />
+                <element signature="e#146#147#0" expanded="true" />
+                <element signature="e#169#170#0" expanded="true" />
+                <element signature="e#203#204#0" expanded="true" />
+                <element signature="e#237#238#0" expanded="true" />
+                <element signature="e#266#267#0" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,8 +52,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Carro.java" />
-        <option value="$PROJECT_DIR$/src/TesteCarro.java" />
+        <option value="$PROJECT_DIR$/src/Sonhos.java" />
+        <option value="$PROJECT_DIR$/src/Loteria.java" />
       </list>
     </option>
   </component>
@@ -75,12 +71,12 @@
         <subPane>
           <expand>
             <path>
-              <item name="ExemploColection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExemploColection" type="462c0819:PsiDirectoryNode" />
+              <item name="Sorteio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sorteio" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ExemploColection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExemploColection" type="462c0819:PsiDirectoryNode" />
+              <item name="Sorteio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sorteio" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -108,9 +104,9 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="TesteCarro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TesteCarro" />
-      <module name="ExemploColection" />
+    <configuration name="Loteria" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Loteria" />
+      <module name="Sorteio" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -156,7 +152,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TesteCarro" />
+        <item itemvalue="Application.Loteria" />
       </list>
     </recent_temporary>
   </component>
@@ -165,11 +161,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6e9e6a3f-6491-4364-b626-5aa5b15baa7e" name="Default" comment="" />
-      <created>1557490126526</created>
+      <changelist id="7d690e81-b4c7-4335-abea-c6eb996f295b" name="Default" comment="" />
+      <created>1557494458774</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1557490126526</updated>
+      <updated>1557494458774</updated>
     </task>
     <servers />
   </component>
@@ -186,7 +182,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30206677" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3290938" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
@@ -209,31 +205,27 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Carro.java">
+    <entry file="file://$PROJECT_DIR$/src/Sonhos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+        <state relative-caret-position="119">
+          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
           <folding>
-            <element signature="e#125#126#0" expanded="true" />
-            <element signature="e#151#152#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#764#765#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#110#111#0" expanded="true" />
+            <element signature="e#146#147#0" expanded="true" />
+            <element signature="e#169#170#0" expanded="true" />
+            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TesteCarro.java">
+    <entry file="file://$PROJECT_DIR$/src/Loteria.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="36" column="62" lean-forward="true" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
+        <state relative-caret-position="326">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
         </state>
       </provider>
     </entry>
