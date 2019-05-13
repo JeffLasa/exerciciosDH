@@ -10,12 +10,20 @@ public class Pessoa {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Pessoa pessoa = (Pessoa) o;
-        return Objects.equals(nome, pessoa.nome) &&
-                Objects.equals(rg, pessoa.rg);
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", rg=" + rg +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object pessoa) {
+        if (this == pessoa) return true;
+        if (pessoa == null || getClass() != pessoa.getClass()) return false;
+        Pessoa pessoas = (Pessoa) pessoa;
+        return Objects.equals(nome, pessoas.nome) &&
+                Objects.equals(rg, pessoas.rg);
     }
 
     @Override
