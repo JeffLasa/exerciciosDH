@@ -6,10 +6,21 @@ public class Livro {
     private Integer anoLancamentoLivro;
     private Integer codigoIsbnLivro;
     private Integer quantidadeLivro;
-    private Double precoLivro;
+    private Float precoLivro;
 
 
     public Livro() {}
+
+
+    public Livro(String codigoLivro, String tituloLivro, String autorLivro, Integer anoLancamentoLivro, Integer codigoIsbnLivro, Integer quantidadeLivro, Float precoLivro) {
+        this.codigoLivro = codigoLivro;
+        this.tituloLivro = tituloLivro;
+        this.autorLivro = autorLivro;
+        this.anoLancamentoLivro = anoLancamentoLivro;
+        this.codigoIsbnLivro = codigoIsbnLivro;
+        this.quantidadeLivro = quantidadeLivro;
+        this.precoLivro = precoLivro;
+    }
 
     public String getCodigoLivro() {
         return codigoLivro;
@@ -59,11 +70,11 @@ public class Livro {
         this.quantidadeLivro = quantidadeLivro;
     }
 
-    public Double getPrecoLivro() {
+    public Float getPrecoLivro() {
         return precoLivro;
     }
 
-    public void setPrecoLivro(Double precoLivro) {
+    public void setPrecoLivro(Float precoLivro) {
         this.precoLivro = precoLivro;
     }
 
@@ -79,6 +90,8 @@ public class Livro {
                 ", precoLivro=" + precoLivro +
                 '}';
     }
+
+
 }
 
 
