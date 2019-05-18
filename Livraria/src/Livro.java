@@ -11,8 +11,7 @@ public class Livro {
 
     public Livro() {}
 
-
-    public Livro(String codigoLivro, String tituloLivro, String autorLivro, Integer anoLancamentoLivro, Integer codigoIsbnLivro, Integer quantidadeLivro, Float precoLivro) {
+    public Livro(String codigoLivro, String tituloLivro, String autorLivro, Integer anoLancamentoLivro, Integer codigoIsbnLivro, Integer quantidadeLivro, Float precoLivro){
         this.codigoLivro = codigoLivro;
         this.tituloLivro = tituloLivro;
         this.autorLivro = autorLivro;
@@ -22,73 +21,68 @@ public class Livro {
         this.precoLivro = precoLivro;
     }
 
-    public String getCodigoLivro() {
+    public String getCodigoLivro(){
         return codigoLivro;
     }
 
-    public void setCodigoLivro(String codigoLivro) {
+    public void setCodigoLivro(String codigoLivro){
         this.codigoLivro = codigoLivro;
     }
 
-    public String getTituloLivro() {
+    public String getTituloLivro(){
         return tituloLivro;
     }
 
-    public void setTituloLivro(String tituloLivro) {
+    public void setTituloLivro(String tituloLivro){
         this.tituloLivro = tituloLivro;
     }
 
-    public String getAutorLivro() {
+    public String getAutorLivro(){
         return autorLivro;
     }
 
-    public void setAutorLivro(String autorLivro) {
+    public void setAutorLivro(String autorLivro){
         this.autorLivro = autorLivro;
     }
 
-    public Integer getAnoLancamentoLivro() {
+    public Integer getAnoLancamentoLivro(){
         return anoLancamentoLivro;
     }
 
-    public void setAnoLancamentoLivro(Integer anoLancamentoLivro) {
+    public void setAnoLancamentoLivro(Integer anoLancamentoLivro){
         this.anoLancamentoLivro = anoLancamentoLivro;
     }
 
-    public Integer getCodigoIsbnLivro() {
+    public Integer getCodigoIsbnLivro(){
         return codigoIsbnLivro;
     }
 
-    public void setCodigoIsbnLivro(Integer codigoIsbnLivro) {
+    public void setCodigoIsbnLivro(Integer codigoIsbnLivro){
         this.codigoIsbnLivro = codigoIsbnLivro;
     }
 
-    public Integer getQuantidadeLivro() {
+    public Integer getQuantidadeLivro(){
         return quantidadeLivro;
     }
 
-    public void setQuantidadeLivro(Integer quantidadeLivro) {
+    public void setQuantidadeLivro(Integer quantidadeLivro){
         this.quantidadeLivro = quantidadeLivro;
     }
 
-    public Float getPrecoLivro() {
+    public Float getPrecoLivro(){
         return precoLivro;
     }
 
-    public void setPrecoLivro(Float precoLivro) {
+    public void setPrecoLivro(Float precoLivro){
         this.precoLivro = precoLivro;
     }
 
     @Override
     public String toString() {
-        return "Livro{" +
-                "codigoLivro='" + codigoLivro + '\'' +
-                ", tituloLivro='" + tituloLivro + '\'' +
-                ", autorLivro='" + autorLivro + '\'' +
-                ", anoLancamentoLivro=" + anoLancamentoLivro +
-                ", codigoIsbnLivro=" + codigoIsbnLivro +
-                ", quantidadeLivro=" + quantidadeLivro +
-                ", precoLivro=" + precoLivro +
-                '}';
+        return "Código: "+ codigoLivro +" Titulo:" + tituloLivro +
+                " Autor: " + autorLivro +" Ano: " + anoLancamentoLivro +
+                " ISBN: " + codigoIsbnLivro +"\nQuantidade em estoque: " + quantidadeLivro +
+                " Preço R$ " + precoLivro;
     }
 
 
