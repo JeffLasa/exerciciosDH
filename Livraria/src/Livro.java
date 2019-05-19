@@ -21,6 +21,15 @@ public class Livro {
         this.precoLivro = precoLivro;
     }
 
+
+
+    @Override
+    public String toString() {
+        return "Código: "+ codigoLivro +" Titulo: " + tituloLivro +" Autor: " + autorLivro +" Ano: " + anoLancamentoLivro +
+                " ISBN: " + codigoIsbnLivro +"\nQuantidade em estoque: " + quantidadeLivro +
+                " Preço R$ " + precoLivro;
+    }
+
     public String getCodigoLivro(){
         return codigoLivro;
     }
@@ -76,16 +85,6 @@ public class Livro {
     public void setPrecoLivro(Float precoLivro){
         this.precoLivro = precoLivro;
     }
-
-    @Override
-    public String toString() {
-        return "Código: "+ codigoLivro +" Titulo:" + tituloLivro +
-                " Autor: " + autorLivro +" Ano: " + anoLancamentoLivro +
-                " ISBN: " + codigoIsbnLivro +"\nQuantidade em estoque: " + quantidadeLivro +
-                " Preço R$ " + precoLivro;
-    }
-
-
 }
 
 

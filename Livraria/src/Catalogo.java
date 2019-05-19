@@ -2,12 +2,13 @@ import java.util.*;
 
 public class Catalogo {
 
-    private Map<String ,Livro> estoque = new HashMap<>();
+    private Map<String, Livro> estoque = new HashMap<>();
 
-    public Catalogo() {}
+    public Catalogo(){
+    }
 
-    public void cadastrarLivro (Livro livro){
-        estoque.put(livro.getCodigoLivro(),livro);
+    public void cadastrarLivro(Livro livro){
+        estoque.put(livro.getCodigoLivro(), livro);
     }
 
     public Livro consultarLivroPorCodigo(String codigoDoLivro){
@@ -16,7 +17,7 @@ public class Catalogo {
 
     public Livro efetuarVenda(Livro codigoDoLivro){
         Livro livro = estoque.get(codigoDoLivro);
-        livro.setQuantidadeLivro(livro.getQuantidadeLivro()-1);
+        livro.setQuantidadeLivro(livro.getQuantidadeLivro() - 1);
         return livro;
 
     }

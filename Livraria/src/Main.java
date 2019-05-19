@@ -1,9 +1,7 @@
 import jdk.nashorn.internal.ir.WhileNode;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
+
 
 public class Main {
 
@@ -53,7 +51,7 @@ public class Main {
         do {
             System.out.println("**************************************");
             System.out.println("Livraria do Povo");
-            System.out.println("Quantidade de Titulo Disponíveis: " + estoque.size());
+            System.out.println("Quantidade de Itens Disponíveis: " + estoque.size());
             System.out.println("**************************************");
             System.out.println("0=> Cadastrar Livro\n1=> Cadastrar Coleção\n2=> Consultar Item por Código\n3=> Efetuar Venda\n4=> Visualizar Estoque\n5=> Excluir Item\n6=> Sair");
             System.out.println("\nDigite a opção desejada: ");
@@ -62,86 +60,139 @@ public class Main {
 
             if (opcao == 0) {
                 Livro livro = new Livro();
-                String cadastraTitulo;
-                String cadastraCodigo;
-                String cadastraAutor;
-                Integer cadastraAno;
-                Integer cadastraISBN;
-                Float cadastraPreco;
-                Integer cadastraQuantidade;
+                Scanner sc = new Scanner(System.in);
                 System.out.println("Digite as informações do novo livro: ");
                 System.out.println("Código :");
-                cadastraCodigo = menu.next();
+                String cadastraCodigo = sc.next();
                 livro.setCodigoLivro(cadastraCodigo);
+
                 System.out.println("Título :");
-                cadastraTitulo = menu.next();
+                String cadastraTitulo = sc.next();
                 livro.setTituloLivro(cadastraTitulo);
+
                 System.out.println("Autor: ");
-                cadastraAutor = menu.next();
+                String cadastraAutor = sc.next();
                 livro.setAutorLivro(cadastraAutor);
-                System.out.println("Ano: ");
-                cadastraAno = menu.nextInt();
-                livro.setAnoLancamentoLivro(cadastraAno);
+
+                Integer cadastraAno;
+                do {
+                    Scanner scInt = new Scanner(System.in);
+                    System.out.println("Ano: ");
+                    cadastraAno = scInt.nextInt();
+                    livro.setAnoLancamentoLivro(cadastraAno);
+                    if (cadastraAno>=2019){
+                        System.out.println("Data inválida");
+                    }
+                }while(cadastraAno>=2019);
+
                 System.out.println("ISBN: ");
-                cadastraISBN = menu.nextInt();
+                Scanner scInt= new Scanner(System.in);
+                Integer cadastraISBN = scInt.nextInt();
                 livro.setCodigoIsbnLivro(cadastraISBN);
+
+                Scanner scFloat = new Scanner(System.in);
                 System.out.println("Preço R$ ");
-                cadastraPreco = menu.nextFloat();
+                Float cadastraPreco = scFloat.nextFloat();
                 livro.setPrecoLivro(cadastraPreco);
+
                 System.out.println("Quantidade: ");
-                cadastraQuantidade = menu.nextInt();
+                Integer cadastraQuantidade = scInt.nextInt();
                 livro.setQuantidadeLivro(cadastraQuantidade);
-                estoque.put(livro.getCodigoLivro(), livro);
-                System.out.println(livro);
-                System.out.println("Adicionado ao estoque");
+
+                Scanner confirmar = new Scanner(System.in);
+                System.out.println("Confirma a inclusão?(S/N): ");
+                String confirmaIncluir = confirmar.next();
+
+                if (confirmaIncluir.equals("s")){
+                    estoque.put(livro.getCodigoLivro(),livro);
+                    System.out.println("Item Adicionado");
+                    System.out.println(livro);
+                } else{
+                    System.out.println("O item não foi Adicionado");
+                }
 
 
             }
             if (opcao == 1) {
 
+
+
             }
             if (opcao == 2) {
-                String chave;
                 Scanner sc = new Scanner(System.in);
-                System.out.println("Digite o código do livro: ");
-                chave = sc.next();
-                Livro livro = estoque.get(chave);
+                System.out.println("Digite o código: ");
+                String verificaCodigo = sc.next();
+                Livro livro = estoque.get(verificaCodigo);
                 System.out.println(livro);
             }
-            if (opcao == 4) {
 
-            for (Map.Entry<String, Livro> entry : estoque.entrySet()) {
+            if (opcao == 3){
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Digite o código: ");
+                String verificaCodigo = sc.next();
+                Livro livro = estoque.get(verificaCodigo);
+                if(livro!=null) {
+                    System.out.println(livro);
+                    Integer verificaQuantidade;
+                    Scanner scInt = new Scanner(System.in);
+                    System.out.println("Quantidade da compra: ");
+                    verificaQuantidade = scInt.nextInt();
+                    if (livro.getQuantidadeLivro()<verificaQuantidade){
+                        System.out.println("Estoque insuficiente: "+livro.getQuantidadeLivro()+" itens disponíveis");
+                    } else {
+                        System.out.println("Valor Total R$ " + verificaQuantidade * livro.getPrecoLivro());
+                        System.out.println("Confirma a compra(S/N)?");
+                        verificaCodigo = sc.next();
+                        if (verificaCodigo.equals("s")) {
+                            System.out.println("Compra efetuada");
+                            estoque.get(livro);
+                            livro.setQuantidadeLivro(livro.getQuantidadeLivro() - verificaQuantidade);
+                            System.out.println(livro);
+                        } else {
+                            System.out.println("Compra cancelada");
+                        }
+                    }
+
+                } else {
+                    System.out.println("Item não encontrado");
+                }
+
+            }
+
+
+            if (opcao == 4) {
+                for (Map.Entry<String, Livro> entry : estoque.entrySet()) {
                 String chave = entry.getKey();
                 Livro livro = entry.getValue();
                 System.out.println(livro);
-            }
-        }
-        if (opcao == 5) {
-            String removeLivro;
-            String confirmaExcluir;
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Digite o código do Item que será excluído: ");
-            removeLivro = sc.next();
-            System.out.println(estoque.get(removeLivro));
-            System.out.println("Tem certeza que deseja exclui(S/N)? ");
-            confirmaExcluir = sc.next();
-            if (confirmaExcluir.equals("s")){
-                estoque.remove(removeLivro);
-                System.out.println("Item removido");
-            } else{
-                System.out.println("O item não foi removido");
+                }
             }
 
-        }
-        if (opcao == 6) {
-            System.out.println("Encerrando o Sistema...");
-        }
-        if (opcao >= 7) {
-            System.out.println("Opção Inválida");
-        }
-    }while(opcao !=6);
+            if (opcao == 5) {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Digite o código do Item que será excluído: ");
+                String removeLivro = sc.next();
+                System.out.println(estoque.get(removeLivro));
+                System.out.println("Tem certeza que deseja exclui(S/N)? ");
+                String confirmaExcluir = sc.next();
+                if (confirmaExcluir.equals("s")){
+                    estoque.remove(removeLivro);
+                    System.out.println("Item removido");
+                } else{
+                    System.out.println("O item não foi removido");
+                }
 
-}
+            }
+            if (opcao == 6) {
+                System.out.println("Encerrando o Sistema...");
+            }
+            if (opcao >= 7) {
+                System.out.println("Opção Inválida");
+            }
+
+        }while(opcao !=6);
+
+    }
 
 }
 
